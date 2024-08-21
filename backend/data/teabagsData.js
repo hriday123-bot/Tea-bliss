@@ -55,7 +55,7 @@ const teabagsData=[
         "price": 250,
         "description": "A royal blend of black tea with a hint of bergamot for a refined taste.",
         "rating": 4.8,
-        "inStock": true,
+        "inStock": false,
         "origin": "Nilgiris",
         "numberOfReviews": 610
     }

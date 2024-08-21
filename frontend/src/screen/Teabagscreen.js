@@ -6,17 +6,16 @@ import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap';
 import Rating from '../components/Rating';
 
 
-const Productscreen = () => {
+
+const Teabagscreen = () => {
     const { id: productId } = useParams();
-    console.log('checking the product value');
     
     const [product, setProduct] = useState({});
 
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const { data } = await axios.get(`/api/data/${productId}`);
-                console.log('Fetching product', data);
+                const { data } = await axios.get(`/api/teabags/${productId}`);
                 setProduct(data);
             } catch (error) {
                 console.error('Error fetching product', error.message);
@@ -28,11 +27,12 @@ const Productscreen = () => {
 
     return (
         <>
-            <Link className='btn btn-light my-3' to='/'>Go Back</Link>
+            <Link className='btn btn-light my-3' to='/teabags'>Go Back</Link>
+            <Link className='btn btn-light my-3' to='/'>Go To Home</Link>
             <Row>
                 <Col md={4}>
                     <Image src={`/${product.image}`} alt={product.name} fluid />
-                    <Card.Text><h6 color='blue' style={{ textAlign: 'center' }}>{product.name}</h6></Card.Text>
+                    <Card.Text><h6 style={{ textAlign: 'center',padding:'10px 10px', color:'green' }}>{product.name}</h6></Card.Text>
 
                 </Col>
                 <Col md={4}>
@@ -66,10 +66,13 @@ const Productscreen = () => {
                             </Link>    
                             </ListGroup.Item>
                         </ListGroup>
+                    
                 </Col>
+
             </Row>
         </>
+
     )
 }
 
-export default Productscreen;
+export default Teabagscreen;

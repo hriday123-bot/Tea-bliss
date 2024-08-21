@@ -16,11 +16,11 @@ const Datadetails = (data) => {
     <>
     <Card className="product-card" style={{ width: '18rem',heght:'18rem',paddingBottom:'0 10px'}}>
       
-      <Link to={`/data/${data.id}`}>
+      <Link to={`/data/${data._id}`}>
         <Card.Img src={data.image} variant="top" />
       </Link>
       <Card.Body>
-        <Link to={`/data/${data.id}`}>
+        <Link to={`/data/${data._id}`}>
           <Card.Title className='product-title'>
              <strong>{data.name}</strong>
           </Card.Title>

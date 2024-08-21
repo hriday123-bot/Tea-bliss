@@ -12,6 +12,7 @@ import 'react-bootstrap'
 import Homescreen from './screen/Homescreen';
 import Productscreen from './screen/Productscreen';
 import Teabags from './screen/Teabags';
+import Teabagscreen from './screen/Teabagscreen';
 
 
 //import react rounter
@@ -22,6 +23,7 @@ const router=createBrowserRouter(
       <Route index={true} element={<Homescreen />} />
       <Route path='/data/:id' element={<Productscreen/>}/>
       <Route path='/teabags' element={<Teabags/>}/>
+      <Route path='/teabags/:id' element={<Teabagscreen/>}/>
     </Route>
   ])
 )
