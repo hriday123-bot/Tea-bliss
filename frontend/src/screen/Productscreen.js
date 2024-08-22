@@ -1,32 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap';
 import Rating from '../components/Rating';
 
+import { useGetDataByIdQuery } from '../slices/dataApiSlice';
+import Loader from '../components/Loader';
+import Message from '../components/Message';
+
 
 const Productscreen = () => {
-    const { id: productId } = useParams();
-    console.log('checking the product value');
-    
-    const [product, setProduct] = useState({});
-
-    useEffect(() => {
-        const fetchProduct = async () => {
-            try {
-                const { data } = await axios.get(`/api/data/${productId}`);
-                console.log('Fetching product', data);
-                setProduct(data);
-            } catch (error) {
-                console.error('Error fetching product', error.message);
-            }
-        }
-        fetchProduct();
-    }, [productId])
-
+    const { id} = useParams();
+    const {data:product,isLoading,isError}=useGetDataByIdQuery(id);
 
     return (
+       <>
+       {isLoading ? (<Loader/>): isError ? ((<Message>{isError?.data?.message || isError.error}</Message>)) :(
         <>
             <Link className='btn btn-light my-3' to='/'>Go Back</Link>
             <Row>
@@ -69,6 +58,14 @@ const Productscreen = () => {
                 </Col>
             </Row>
         </>
+       )}
+       
+       
+       </> 
+
+
+
+        
     )
 }
 

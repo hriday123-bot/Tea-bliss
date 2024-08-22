@@ -13,6 +13,8 @@ import Homescreen from './screen/Homescreen';
 import Productscreen from './screen/Productscreen';
 import Teabags from './screen/Teabags';
 import Teabagscreen from './screen/Teabagscreen';
+import {Provider} from 'react-redux';
+import store from './store';
 
 
 //import react rounter
@@ -31,7 +33,9 @@ const router=createBrowserRouter(
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <RouterProvider router={router}/>
+    <Provider store={store}>
+      <RouterProvider router={router}/>
+    </Provider>
 </React.StrictMode>
 );
 

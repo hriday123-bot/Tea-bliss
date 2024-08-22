@@ -1,32 +1,35 @@
-import React, { useState,useEffect } from 'react'
-import axios from 'axios'
 import {Row, Col} from 'react-bootstrap'
 import Datadetails from '../components/Datareveal';
 
+import {useGetDataQuery} from '../slices/dataApiSlice';
+import Loader from '../components/Loader';
+import Message from '../components/Message';
+
 const Homescreen = () => {
-  const [data,setData]=useState([]);
-  
-  useEffect(() => {
-    const fetchdata=async()=>{
-      const {data}=await axios.get('/api/data');
-      console.log('checking data is coming from backend',data);
-      setData(data);
-    }
-    fetchdata();
-  }, [])
+  const { data, isLoading, isError } = useGetDataQuery();
   
 
   console.log('data details',data);  
   return (
-    <>
-    <Row style={{padding:'10px 10px',rowGap:'13px'}}>
+   <>
+    {isLoading ? (Loader): isError ? (<Message>{isError?.data?.message || isError.error}</Message>):(
+      <>
+        <Row style={{padding:'10px 10px',rowGap:'13px'}}>
         {data.map((value)=>(
             <Col sm={12} md={6} lg={4} xl={3}>
                 {Datadetails(value)}
             </Col>
         ))}
-    </Row>
+        </Row>
     </>
+
+    )} 
+   
+   
+   </>
+
+
+   
   )
 }
 
