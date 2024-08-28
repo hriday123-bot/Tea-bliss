@@ -6,12 +6,14 @@ export const  teabgaApiSlice= apiSlice.injectEndpoints({
         getTeabags: builder.query({
             query:()=>({
                 url: `${TEABAG_URL}`,
+                method: 'GET',
             }),
             keepUnusedDataFor:5,
           }),
           getTeabagById: builder.query({
             query:(id)=>({
                 url: `${TEABAG_URL}/${id}`,
+                method: 'GET',
             }),
             keepUnusedDataFor:5,
           })

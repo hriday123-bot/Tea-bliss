@@ -26,6 +26,7 @@ const teaBagsDataSchema=new mongoose.Schema({
     origin:String,
     image:String,
     numberOfReviews:Number,
+    countInStock:{type:Number,required:true},
     reviews:[reviewSchema]
 })
 

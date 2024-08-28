@@ -1,4 +1,4 @@
-const teabagsData=[
+const teabagsData = [
     {
         "id": 1,
         "name": "Misty Morning Assam",
@@ -9,7 +9,8 @@ const teabagsData=[
         "rating": 4.7,
         "inStock": true,
         "origin": "Assam",
-        "numberOfReviews": 450
+        "numberOfReviews": 450,
+        "countInStock": 15
     },
     {
         "id": 2,
@@ -21,7 +22,8 @@ const teabagsData=[
         "rating": 4.5,
         "inStock": true,
         "origin": "Darjeeling",
-        "numberOfReviews": 320
+        "numberOfReviews": 320,
+        "countInStock": 10
     },
     {
         "id": 3,
@@ -33,7 +35,8 @@ const teabagsData=[
         "rating": 4.9,
         "inStock": true,
         "origin": "Assam",
-        "numberOfReviews": 780
+        "numberOfReviews": 780,
+        "countInStock": 20
     },
     {
         "id": 4,
@@ -45,7 +48,8 @@ const teabagsData=[
         "rating": 4.6,
         "inStock": true,
         "origin": "Uttar Pradesh",
-        "numberOfReviews": 270
+        "numberOfReviews": 270,
+        "countInStock": 18
     },
     {
         "id": 5,
@@ -57,7 +61,8 @@ const teabagsData=[
         "rating": 4.8,
         "inStock": false,
         "origin": "Nilgiris",
-        "numberOfReviews": 610
+        "numberOfReviews": 610,
+        "countInStock": 0
     }
 ]
 
