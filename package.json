@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.7",
     "axios": "^1.7.4",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
