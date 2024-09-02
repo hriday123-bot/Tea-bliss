@@ -34,3 +34,56 @@ main {
   z-index: 10;
 }
 
+.shopping-cart-title {
+  font-size: 1rem; /* Larger font size */
+  color: red; /* Brand color (Bootstrap's primary color) */
+  font-weight: 300; /* Bold font weight */
+  text-align: center; /* Centered text */
+  margin-bottom: 20px; /* Space below the title */
+  text-transform: uppercase; /* Uppercase letters for emphasis */
+  letter-spacing: 2px; /* Spacing between letters for a modern look */
+  border-bottom: 3px solid #007bff; /* Adds a border under the title */
+  padding-bottom: 10px; 
+  padding-top: 20px;/* Space between text and border */
+}
+
+
+.cart-summary {
+  background-color: #f8f9fa; /* Light grey background for contrast */
+  border-radius: 10px;       /* Rounded corners */
+  padding: 20px;             /* Some padding around the content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center;  
+  margin-top: 20px;      /* Center-align the text */
+}
+
+.subtotal-text {
+  font-size: 1.5rem;         /* Larger font size for emphasis */
+  font-weight:inherit;         /* Bold text for the subtotal */
+  margin-bottom: 20px;       /* Space below the subtotal */
+  color: green;   
+  font-family: 'Montserrat', sans-serif; /* Modern font family for clean aesthetics */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  letter-spacing: 0.5px;    /*         /* Primary color for the subtotal text */
+}
+
+.checkout-button {
+  font-size: 1.2rem;         /* Slightly larger button text */
+  font-weight: bold;         /* Bold text for the button */
+  padding: 10px 20px;        /* Adequate padding for the button */
+  background-color: #007bff; /* Primary color background */
+  border-color: #007bff;     /* Match the border with the background */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.checkout-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: scale(1.05);    /* Slight scaling effect on hover */
+}
+
+.checkout-button:disabled {
+  background-color: #cccccc; /* Grey out the button when disabled */
+  border-color: #cccccc;
+  cursor: not-allowed;       /* Show not-allowed cursor */
+}
+

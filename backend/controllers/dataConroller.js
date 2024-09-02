@@ -7,7 +7,7 @@ const getData=asyncHandler(async (req,res)=>{
 })
 
 const getDataId=asyncHandler(async (req,res)=>{
-    console.log('checking',req.params.id);
+    // console.log('checking',req.params.id);
     const data=await Data.findById(req.params.id)
     if(data) return res.json(data);
     else 

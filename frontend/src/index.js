@@ -15,6 +15,7 @@ import Teabags from './screen/Teabags';
 import Teabagscreen from './screen/Teabagscreen';
 import {Provider} from 'react-redux';
 import store from './store';
+import CartScreen from './screen/CartScreen';
 
 
 //import react rounter
@@ -26,6 +27,7 @@ const router=createBrowserRouter(
       <Route path='/data/:id' element={<Productscreen/>}/>
       <Route path='/teabags' element={<Teabags/>}/>
       <Route path='/teabags/:id' element={<Teabagscreen/>}/>
+      <Route path='/cart' element={<CartScreen/>}/>
     </Route>
   ])
 )
